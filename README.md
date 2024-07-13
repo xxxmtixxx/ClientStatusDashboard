@@ -34,3 +34,5 @@ To uninstall the Client Status Dashboard, run the uninstaller script with admini
 - Deletes the directory containing the HTML dashboard and the monitoring script.
 - Deletes the shortcut from the Public Desktop.
 - Logs all actions to `C:\Temp\console.log`.
+
+![image](https://github.com/user-attachments/assets/3af1317f-e248-4b99-9c96-793b6ea39e7f)
