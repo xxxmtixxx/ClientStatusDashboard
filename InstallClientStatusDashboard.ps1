@@ -8,7 +8,7 @@ if (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 # Define the URL of the ZIP file
-$zipUrl = "https://github.com/xxxmtixxx/ClientStatusDashboard/archive/refs/heads/main.zip"
+$zipUrl = "https://github.com/xxxmtixxx/UptimeMonitorDashboard/archive/refs/heads/main.zip"
 
 # Define the path where the ZIP file will be downloaded
 $zipFilePath = "C:\Temp\main.zip"
