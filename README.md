@@ -1,4 +1,4 @@
-Cl# Uptime Monitor Dashboard
+# Uptime Monitor Dashboard
 
 ![image](https://github.com/user-attachments/assets/3af1317f-e248-4b99-9c96-793b6ea39e7f)
 
