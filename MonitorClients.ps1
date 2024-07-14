@@ -33,7 +33,7 @@ function Test-ClientConnection {
 # Function to update the dashboard
 function Update-Dashboard {
     # Re-read the CSV file each time this function is called
-    $clients = Import-Csv -Path $csvFilePath | Sort-Object Company
+    $clients = Import-Csv -Path $csvFilePath | Sort-Object Client
     $dashboardContent = @"
 <html>
 <head>
@@ -53,11 +53,11 @@ function Update-Dashboard {
 <h1>Uptime Monitor</h1>
 <button id='darkModeToggle' style='margin-bottom: 20px;'>Toggle Dark Mode</button>
 <table border='1'>
-<tr><th>Company</th><th>IP/Domain</th><th>Status</th></tr>
+<tr><th>Client</th><th>IP/Domain</th><th>Status</th></tr>
 "@
 
     foreach ($client in $clients) {
-        $company = $client.Company
+        $client = $client.Client
         $ipOrDomain = $client.IPOrDomain
         $status = Test-ClientConnection -ipOrDomain $ipOrDomain
         $color = switch ($status) {
@@ -65,7 +65,7 @@ function Update-Dashboard {
             "Offline" { "Red" }
             "Local Internet Down" { "Orange" }
         }
-        $dashboardContent += "<tr><td>$company</td><td>$ipOrDomain</td><td style='background-color:$color;'>$status</td></tr>`n"
+        $dashboardContent += "<tr><td>$client</td><td>$ipOrDomain</td><td style='background-color:$color;'>$status</td></tr>`n"
     }
 
     if ($status -eq "Local Internet Down") {
