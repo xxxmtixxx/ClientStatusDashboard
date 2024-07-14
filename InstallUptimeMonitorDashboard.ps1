@@ -141,7 +141,7 @@ Write-Host "Granted read access to Authenticated Users for share: $shareName"
 
 # Create a shortcut to the dashboard.html file on the Public Desktop
 $WshShell = New-Object -ComObject WScript.Shell
-$Shortcut = $WshShell.CreateShortcut("$env:PUBLIC\Desktop\Client Status Dashboard.lnk")
+$Shortcut = $WshShell.CreateShortcut("$env:PUBLIC\Desktop\Uptime Monitor Dashboard.lnk")
 
 # Get the hostname
 $hostname = [System.Net.Dns]::GetHostName()
