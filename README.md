@@ -3,7 +3,7 @@
 ![image](https://github.com/user-attachments/assets/c12355e9-72c0-4829-86db-7da66954c9ca)
 
 ## Description
-The Uptime Monitor Dashboard is a simple yet powerful PowerShell-based tool, designed to monitor the status of multiple client locations. This tool does not require a webserver and continuously checks the status of clients listed in the CSV file, updating an HTML dashboard accordingly. The dashboard, which is shared via SMB, can be easily accessed from other Windows machines on the same network, making this tool lightweight and easy to deploy.
+The Uptime Monitor Dashboard is a simple yet powerful PowerShell-based tool, designed to monitor the uptime status of multiple IPs/domains at once. This tool does not require a webserver and continuously checks the status of clients listed in the CSV file, updating an HTML dashboard accordingly. The dashboard, which is shared via SMB, can be easily accessed from other Windows machines on the same network, making this tool lightweight and easy to deploy.
 
 ## Features
 - **Simplicity**: The tool operates on a "red for down, green for up" principle, allowing you to see the status of all clients at a glance.
