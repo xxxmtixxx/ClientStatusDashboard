@@ -57,7 +57,7 @@ function Update-Dashboard {
 "@
 
     foreach ($client in $clients) {
-        $client = $client.Client
+        $clientName = $client.Client
         $ipOrDomain = $client.IPOrDomain
         $status = Test-ClientConnection -ipOrDomain $ipOrDomain
         $color = switch ($status) {
@@ -65,7 +65,7 @@ function Update-Dashboard {
             "Offline" { "Red" }
             "Local Internet Down" { "Orange" }
         }
-        $dashboardContent += "<tr><td>$client</td><td>$ipOrDomain</td><td style='background-color:$color;'>$status</td></tr>`n"
+        $dashboardContent += "<tr><td>$clientName</td><td>$ipOrDomain</td><td style='background-color:$color;'>$status</td></tr>`n"
     }
 
     if ($status -eq "Local Internet Down") {
