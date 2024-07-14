@@ -1,3 +1,12 @@
+# Start the transcript
+Start-Transcript -Path "C:\Temp\console.log" -Append
+
+# Check for administrative privileges at the beginning of the script
+if (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    Write-Output "This script must be run as an Administrator. Please re-run this script as an Administrator."
+    return
+}
+
 # Define the service name
 $serviceName = 'MonitorClients'
 
