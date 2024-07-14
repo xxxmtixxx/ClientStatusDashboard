@@ -53,7 +53,7 @@ if (Test-Path -Path $destinationPath) {
 }
 
 # Delete the shortcut from the Public Desktop
-$shortcutPath = "$env:PUBLIC\Desktop\Client Status Dashboard.lnk"
+$shortcutPath = "$env:PUBLIC\Desktop\Uptime Monitor Dashboard.lnk"
 if (Test-Path -Path $shortcutPath) {
     Remove-Item -Path $shortcutPath -Force
     Write-Output "Deleted shortcut from the Public Desktop."
