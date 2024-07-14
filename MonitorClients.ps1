@@ -50,7 +50,7 @@ function Update-Dashboard {
     </style>
 </head>
 <body>
-<h1>Client Status</h1>
+<h1>Uptime Monitor</h1>
 <button id='darkModeToggle' style='margin-bottom: 20px;'>Toggle Dark Mode</button>
 <table border='1'>
 <tr><th>Company</th><th>IP/Domain</th><th>Status</th></tr>
