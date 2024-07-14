@@ -31,7 +31,7 @@ if (-not (Test-Path -Path $extractPath)) {
 Expand-Archive -Path $zipFilePath -DestinationPath $extractPath -Force
 
 # Define the source path
-$sourcePath = Join-Path -Path $extractPath -ChildPath "ClientStatusDashboard-main"
+$sourcePath = Join-Path -Path $extractPath -ChildPath "UptimeMonitorDashboard-main"
 
 # Move the files to the destination directory
 Move-Item -Path "$sourcePath\MonitorClients.ps1" -Destination $extractPath
